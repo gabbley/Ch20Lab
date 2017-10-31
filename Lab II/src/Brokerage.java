@@ -21,7 +21,7 @@ public class Brokerage implements Login{
 		if (len < 2 || len > 10)
 			return -2;
 		if (registeredTraders.containsKey(name))
-			return -2;
+			return -3;
 					
 		registeredTraders.put(name, new Trader(this, password, name));
 		return 0;
@@ -29,8 +29,20 @@ public class Brokerage implements Login{
 	@Override
 	public int login(String name, String password) {
 		Trader trader = registeredTraders.get(name);
+		
+		if (!registeredTraders.containsKey(name))
+			return -1; //screen name is not found
+		if (!registeredTraders.containsValue(trader))
+			return -2;
+/*		if (!registeredTraders.contain)
+			return -3;*/
+			
 		loggedInTraders.add(trader);
 		return 0;
+	}
+	
+	public void logout(Trader trader) {
+		loggedInTraders.remove(trader);
 	}
 	
 }
