@@ -30,18 +30,20 @@ public class Brokerage implements Login{
 	public int login(String name, String password) {
 		Trader trader = registeredTraders.get(name);
 		
-		if (!registeredTraders.containsKey(name))
-			return -1; //screen name is not found
-		if (!registeredTraders.containsValue(trader))
-			return -2;
-/*		if (!registeredTraders.contain)
-			return -3;*/
+		if (trader == null)
+			return -1;
+		String storedPassword = trader.getPassword();
+		if (!storedPassword.equals(password))
+			return -2; //screen name is not found
+		if (registeredTraders.containsValue(trader))
+			return -3;
 			
 		loggedInTraders.add(trader);
 		return 0;
 	}
 	
 	public void logout(Trader trader) {
+		if (loggedInTraders.contains(trader))
 		loggedInTraders.remove(trader);
 	}
 	

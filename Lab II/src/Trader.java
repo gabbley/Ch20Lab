@@ -14,5 +14,10 @@ public class Trader {
 	public String toString() {
 		return brokerage + ": " + username;
 	}
+
+	public String getPassword() {
+		// TODO Auto-generated method stub
+		return password;
+	}
 	
 }
