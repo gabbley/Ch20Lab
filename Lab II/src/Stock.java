@@ -6,6 +6,7 @@ public class Stock implements Comparable<Stock>{
 	private String symbol;
 	private String name;
 	private double lastPrice, lowPrice, highPrice;
+	private int dayVolume;
 	
 	private PriorityQueue<TradeOrder> buyOrders;
 	private PriorityQueue<TradeOrder> sellOrders;
@@ -18,6 +19,7 @@ public class Stock implements Comparable<Stock>{
 		lowPrice = p;
 		highPrice = p;
 		lastPrice = p;
+		dayVolume = 0;
 		
 	}
 	
