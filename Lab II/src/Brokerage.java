@@ -26,6 +26,11 @@ public class Brokerage implements Login{
 		registeredTraders.put(name, new Trader(this, password, name));
 		return 0;
 	}
+	
+	public void getQuote(String symbol, Trader trader) {
+		
+	}
+	
 	@Override
 	public int login(String name, String password) {
 		Trader trader = registeredTraders.get(name);
@@ -45,6 +50,10 @@ public class Brokerage implements Login{
 	public void logout(Trader trader) {
 		if (loggedInTraders.contains(trader))
 		loggedInTraders.remove(trader);
+	}
+	
+	public void placeOrder(TradeOrder order) {
+		
 	}
 	
 }

@@ -20,6 +20,8 @@ public class Stock implements Comparable<Stock>{
 		highPrice = p;
 		lastPrice = p;
 		dayVolume = 0;
+		buyOrders = new PriorityQueue<TradeOrder>();
+		sellOrders = new PriorityQueue<TradeOrder>();
 		
 	}
 	
