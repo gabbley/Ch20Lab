@@ -64,7 +64,7 @@ public class Brokerage implements Login {
 	}
 
 	public void placeOrder(TradeOrder order) {
-		
+		this.placeOrder(order);
 	}
 
 }

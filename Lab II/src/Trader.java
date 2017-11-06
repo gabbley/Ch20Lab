@@ -43,6 +43,7 @@ public class Trader {
 		return password;
 	}
 
+	//TODO getquote
 	public void getQuote(String symbol) {
 
 	}
@@ -52,11 +53,7 @@ public class Trader {
 	}
 
 	public boolean equals(Object other) {
-<<<<<<< HEAD
-		
-=======
 		return (this.compareTo((Trader) other) == 0);
->>>>>>> branch 'master' of https://github.com/gabbley/Ch20Lab
 	}
 
 	public boolean hasMessages() {
@@ -68,12 +65,14 @@ public class Trader {
 		removeMessages();
 	}
 
+	
+	//TODO placeorder
 	public void placeOrder(TradeOrder order) {
-
+		
 	}
 
 	public void quit() {
-
+		System.exit(0);
 	}
 
 	public void receiveMessage(String msg) {
