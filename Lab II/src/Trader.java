@@ -48,7 +48,7 @@ public class Trader {
 	}
 	
 	public boolean equals(Object other) {
-		/wjyfhaiosdfhasuilf
+		
 	}
 	
 	public boolean hasMessages() {
